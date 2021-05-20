@@ -26,32 +26,24 @@ parent.innerHTML += kid
 
 
 
-function hmm(e) {
-    if(e.target !== e.currentTarget){
-        let clickedItem = e.target.id
-        allert('hello' + clickedItem)
-    }
-   
+
+
+function hide(e){
+    e.currentTarget.style.visibility = 'hidden';
+    console.log(e.currentTarget);
+    
 }
 
-const parent = document.getElementById('cart')
-parent.addEventListener('click', hmm, false )
-// function hide(e){
-//     e.currentTarget.style.visibility = 'hidden';
-//     console.log(e.currentTarget);
- 
-//   }
 
-//   hide()
-  
-//   var ps = document.getElementsByTagName('p');
-  
-//   for(var i = 0; i < ps.length; i++){
-//     // Console: print the clicked <p> element
-//     ps[i].addEventListener('click', hide, false);
-//   }
-//   // Console: print <body>
-//   document.body.addEventListener('click', hide, false);
+
+
+let cards = document.querySelectorAll('card');
+
+for(let i = 0; i < cards.length; i++){
+    // Console: print the clicked <p> element
+    cards[i].addEventListener('click', hide );
+}
+
 
 
 
